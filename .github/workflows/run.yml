@@ -1,13 +1,7 @@
 name: Cloud check in action
+# Automatic triggers disabled at the repository owner's request.
 on:
-  push:
-    branches:
-      - main
-  watch:
-    types: started
   workflow_dispatch:
-  schedule:
-    - cron: 35 2 * * *
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
